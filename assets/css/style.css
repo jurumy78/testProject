@@ -1,0 +1,144 @@
+* {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Noto Sans KR";
+  margin: 0 auto;
+}
+
+.cont1,
+.cont3 {
+  background-color: lightcyan;
+  height: 705px;
+}
+.cont2 {
+  /* background-color: lightcoral; */
+  padding-bottom: 70px;
+}
+.conts {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tit {
+  padding: 20px 0;
+  font-weight: 700;
+}
+.cont2 .ui-list {
+  display: flex;
+}
+.cont2 .ui-list .dep1 {
+  flex: 1;
+  height: 400px;
+  margin-right: 15px;
+  background-color: lightcyan;
+  position: relative;
+  border-radius: 5px;
+}
+
+.cont2 .ui-list .dep1 .box-wrap {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+}
+
+.cont2 .ui-list .dep1 .box-wrap div {
+  color: #333;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.cont2 .ui-list .dep1 button {
+  background-color: lightseagreen;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 140px;
+  height: 45px;
+  transition: background 0.3s;
+}
+.cont2 .ui-list .dep1 button:hover {
+  background-color: lightskyblue;
+}
+
+/* 팝업 */
+#modal {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-box {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 500px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, 150%);
+}
+
+.modal .modal-box h4 {
+  font-size: 20px;
+  color: white;
+  padding: 15px 0;
+  background-color: lightseagreen;
+  border-bottom: 5px solid rgb(19, 204, 133);
+  border-radius: 10px 10px 0 0;
+}
+.modal .modal-box p {
+  text-align: left;
+  padding: 15px;
+}
+.modal .modal-box .modal-close {
+  background-color: lightseagreen;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.quick {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: lightseagreen;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  text-align: center;
+}
+.quick a {
+  display: inline-block;
+  margin-top: 13px;
+  color: white;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+  .cont2 .ui-list {
+    /* flex-wrap: wrap; */
+    display: block;
+  }
+  .cont2 .ui-list .dep1 {
+    margin: 0 15px 15px 15px;
+  }
+  .modal .modal-wrap {
+    margin: 0 15px;
+  }
+  .modal .modal-box {
+    width: 100%;
+    transform: translate(-50%, 150%);
+  }
+}
